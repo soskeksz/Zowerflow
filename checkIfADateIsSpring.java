@@ -1,5 +1,7 @@
 //only returns true if the product is green, and the incoming date is in spring
 
+//NOTE: I had Color enum in this project
+
 public boolean accepts(Product product, LocalDate date) {
         Set<Month> springMonths = new HashSet<>(Arrays.asList(Month.MARCH, Month.APRIL, Month.MAY));
         return product.color().equals(Color.GREEN) && springMonths.contains(date.getMonth());
